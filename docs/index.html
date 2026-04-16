@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaultly — Personal Finance Tracker for iOS</title>
+    <meta name="description" content="Vaultly is a privacy-first personal finance tracker for iOS. Track accounts, budgets, goals, and net worth — all on-device with no data collection.">
+    <meta name="keywords" content="Vaultly, finance tracker, iOS, budget, net worth, SwiftUI, privacy">
+    <meta property="og:title" content="Vaultly — Personal Finance Tracker for iOS">
+    <meta property="og:description" content="Track your finances privately. No servers, no tracking — everything stays on your device.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://appvaultly.github.io/Vaultly/">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--bg:#061422;--surface:rgba(167,200,255,.06);--border:rgba(167,200,255,.12);--accent:#a7c8ff;--text:#c8d6e5;--text-bright:#e2ecf7;--text-dim:#6b7f99;--text-faint:#4a5e75}
+        body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+        a{color:var(--accent);text-decoration:none}
+        a:hover{text-decoration:underline}
+
+        /* Hero */
+        .hero{text-align:center;padding:80px 20px 60px;max-width:680px;margin:0 auto}
+        .hero-logo{font-size:3.5rem;font-weight:800;color:var(--accent);letter-spacing:-1.5px}
+        .hero-tagline{font-size:1.25rem;color:var(--text-bright);margin:12px 0 6px;font-weight:600}
+        .hero-sub{color:var(--text-dim);font-size:1rem;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
+        .app-store-badge{display:inline-block;transition:opacity .2s}
+        .app-store-badge:hover{opacity:.8}
+        .app-store-badge img{height:54px}
+
+        /* Screenshots */
+        .screenshots{padding:40px 20px 60px;overflow-x:auto;-webkit-overflow-scrolling:touch;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;max-width:960px;margin:0 auto}
+        .screenshots img{width:220px;border-radius:24px;border:1px solid var(--border);flex-shrink:0;object-fit:cover}
+
+        /* Features */
+        .features{max-width:880px;margin:0 auto;padding:40px 20px 60px}
+        .features h2{text-align:center;font-size:1.6rem;color:var(--text-bright);margin-bottom:40px;font-weight:700}
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+        .feature-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px}
+        .feature-icon{font-size:1.6rem;margin-bottom:10px}
+        .feature-card h3{font-size:1rem;color:var(--text-bright);margin-bottom:6px}
+        .feature-card p{font-size:.9rem;color:var(--text-dim);line-height:1.5}
+
+        /* Privacy Banner */
+        .privacy-banner{max-width:680px;margin:0 auto 60px;padding:0 20px}
+        .privacy-inner{background:rgba(167,200,255,.08);border-left:3px solid var(--accent);border-radius:10px;padding:20px 24px;text-align:center}
+        .privacy-inner p{font-size:.95rem}
+
+        /* Footer */
+        footer{text-align:center;padding:40px 20px;border-top:1px solid var(--border)}
+        .footer-links{display:flex;gap:24px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
+        .footer-links a{color:var(--text-dim);font-size:.9rem;font-weight:500}
+        .footer-links a:hover{color:var(--accent)}
+        .footer-copy{color:var(--text-faint);font-size:.8rem}
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-logo">Vaultly</div>
+        <p class="hero-tagline">Your finances. Your device. Your control.</p>
+        <p class="hero-sub">A privacy-first personal finance tracker for iOS. Track accounts, budgets, goals, and net worth — with zero data collection.</p>
+        <!-- Replace # with your App Store link -->
+        <a href="#" class="app-store-badge" aria-label="Download on the App Store">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+        </a>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots">
+        <img src="images/01_Dashboard.png" alt="Vaultly Dashboard showing net worth and accounts" width="220" height="440" loading="lazy">
+        <img src="images/03_Budgets.png" alt="Vaultly Budgets screen with spending categories" width="220" height="440" loading="lazy">
+        <img src="images/04_Goals.png" alt="Vaultly Goals screen with savings progress" width="220" height="440" loading="lazy">
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>Everything you need, nothing you don't</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Live Net Worth</h3>
+                <p>See your total net worth update in real time across all accounts.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏦</div>
+                <h3>Multiple Accounts</h3>
+                <p>Checking, savings, credit cards, cash, investments — all in one place.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Budgets &amp; Goals</h3>
+                <p>Set monthly budgets and savings goals with visual progress tracking.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>100% Private</h3>
+                <p>No servers, no analytics, no tracking. All data stays on your device.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">☁️</div>
+                <h3>iCloud Sync</h3>
+                <p>Optionally sync across your Apple devices via your personal iCloud.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📄</div>
+                <h3>Export &amp; Reports</h3>
+                <p>Export transactions as PDF or CSV. Your data, your way.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Banner -->
+    <div class="privacy-banner">
+        <div class="privacy-inner">
+            <p><strong>Zero data collection.</strong> Vaultly has no backend, no analytics SDK, and no third-party trackers. Read our <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="mailto:appvaultly@gmail.com">Contact</a>
+        </div>
+        <p class="footer-copy">© 2026 Amandeep Singh Chhatwal. Vaultly is not affiliated with any financial institution.</p>
+    </footer>
+
+</body>
+</html>
